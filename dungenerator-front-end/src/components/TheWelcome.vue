@@ -14,9 +14,10 @@ import SupportIcon from "./icons/IconSupport.vue";
     </template>
     <template #heading>Documentation</template>
 
-    Vue’s
-    <a target="_blank" href="https://vuejs.org/">official documentation</a>
-    provides you with all information you need to get started.
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi reiciendis
+    ipsa, modi ut repellat vero voluptate quam odit. Quibusdam, adipisci.
+    Numquam repellat voluptates architecto dicta commodi repellendus distinctio
+    eveniet quam!
   </WelcomeItem>
 
   <WelcomeItem>
@@ -25,16 +26,10 @@ import SupportIcon from "./icons/IconSupport.vue";
     </template>
     <template #heading>Tooling</template>
 
-    This project is served and bundled with
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite</a>.
-    The recommended IDE setup is
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a> +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>.
-    If you need to test your components and web pages, check out
-    <a href="https://www.cypress.io/" target="_blank">Cypress</a> and
-    <a href="https://on.cypress.io/component" target="_blank"
-      >Cypress Component Testing</a
-    >.
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta sapiente
+    veniam consectetur aspernatur asperiores, incidunt temporibus! Enim
+    distinctio magnam quasi aliquam, libero repellat quia veniam. Hic aspernatur
+    vero nesciunt porro?
 
     <br />
 
@@ -47,17 +42,9 @@ import SupportIcon from "./icons/IconSupport.vue";
     </template>
     <template #heading>Ecosystem</template>
 
-    Get official tools and libraries for your project:
-    <a target="_blank" href="https://pinia.vuejs.org/">Pinia</a>,
-    <a target="_blank" href="https://router.vuejs.org/">Vue Router</a>,
-    <a target="_blank" href="https://test-utils.vuejs.org/">Vue Test Utils</a>,
-    and
-    <a target="_blank" href="https://github.com/vuejs/devtools">Vue Dev Tools</a
-    >. If you need more resources, we suggest paying
-    <a target="_blank" href="https://github.com/vuejs/awesome-vue"
-      >Awesome Vue</a
-    >
-    a visit.
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, architecto
+    ex? Cum, officia impedit nesciunt aspernatur nemo exercitationem vitae neque
+    quas, repellat odit suscipit sunt corrupti sed illum temporibus porro.
   </WelcomeItem>
 
   <WelcomeItem>
@@ -66,16 +53,10 @@ import SupportIcon from "./icons/IconSupport.vue";
     </template>
     <template #heading>Community</template>
 
-    Got stuck? Ask your question on
-    <a target="_blank" href="https://chat.vuejs.org">Vue Land</a>, our official
-    Discord server, or
-    <a target="_blank" href="https://stackoverflow.com/questions/tagged/vue.js"
-      >StackOverflow</a
-    >. You should also subscribe to
-    <a target="_blank" href="https://news.vuejs.org">our mailing list</a> and
-    follow the official
-    <a target="_blank" href="https://twitter.com/vuejs">@vuejs</a>
-    twitter account for latest news in the Vue world.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt eligendi
+    eos laborum nihil id ipsa eveniet! Deleniti recusandae fuga tenetur
+    laboriosam pariatur error ut delectus dicta, perspiciatis aliquid quaerat
+    earum!
   </WelcomeItem>
 
   <WelcomeItem>
@@ -83,9 +64,9 @@ import SupportIcon from "./icons/IconSupport.vue";
       <SupportIcon />
     </template>
     <template #heading>Support Vue</template>
-
-    As an independent project, Vue relies on community backing for its
-    sustainability. You can help us by
-    <a target="_blank" href="https://vuejs.org/sponsor/">becoming a sponsor</a>.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium numquam
+    fugit ipsa odio doloremque repellendus magnam inventore. Corrupti esse
+    excepturi, quis quo quidem repudiandae voluptates provident adipisci,
+    praesentium, reprehenderit doloremque.
   </WelcomeItem>
 </template>
