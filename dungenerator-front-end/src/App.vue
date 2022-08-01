@@ -5,13 +5,30 @@ import HelloWorld from "./components/HelloWorld.vue";
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+    <div class="dragon">
+      <!-- Art by Ooyamaneko courtesy of ascriiart.eu -->
+      <pre>
+                 /           /
+                /' .,,,,  ./
+               /';'     ,/
+              / /   ,,//,`'`
+             ( ,, '_,  ,,,' ``
+             |    /@  ,,, ;" `
+            /    .   ,''/' `,``
+           /   .     ./, `,, ` ;
+        ,./  .   ,-,',` ,,/''\,'
+       |   /; ./,,'`,,'' |   |
+       |     /   ','    /    |
+        \___/'   '     |     |
+          `,,'  |      /     `\
+               /      |        ~\
+              '       (
+             :
+            ; .         \--
+          :   \         ;
+   </pre
+      >
+    </div>
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
@@ -28,14 +45,15 @@ import HelloWorld from "./components/HelloWorld.vue";
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
+.dragon {
+  font-family: monospace;
+  white-space: pre;
   display: block;
   margin: 0 auto 2rem;
+}
+header {
+  line-height: 1.5;
+  max-height: 200vh;
 }
 
 nav {
@@ -67,6 +85,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
+    flex-direction: column;
     padding-right: calc(var(--section-gap) / 2);
   }
 
