@@ -8,6 +8,8 @@ var buttonText = ref("Generate 1 sentence");
 const apiThinkingText = ref("Generating...");
 //var apiThinkingFlag = ref(false);
 var generated_text = ref("What will you generate?");
+const apiURL =
+  "https://s99cwqgkyk.execute-api.us-west-2.amazonaws.com/prod-v1-0/make-inference";
 
 function updateButtonText() {
   if (numberToGenerate.value === 1) buttonText.value = "Generate 1 sentence";
@@ -21,14 +23,20 @@ function callAPI() {
   generated_text.value = apiThinkingText.value;
 
   axios
-    .get("https://baconipsum.com/api/", {
-      params: {
-        type: "all-meat",
-        sentences: 5,
-        "start-with-lorem": 1,
+    .post(
+      apiURL,
+      {
+        params: {
+          input: seedPhrase.value,
+          num_return_sequences: numberToGenerate.value,
+        },
       },
+      { headers: { "content-type": "application/json" } }
+    )
+    .then((response) => {
+      console.log(response);
     })
-    .then((response) => console.log(response))
+
     .catch((error) => {
       console.error("An error occured.", error);
     });
