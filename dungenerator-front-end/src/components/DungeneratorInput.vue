@@ -18,11 +18,7 @@ function updateButtonText() {
 }
 
 function callAPI() {
-  console.log("Button was clicked");
-  console.log("Seed Phrase was: " + seedPhrase.value);
-  console.log("Number to generate is: " + numberToGenerate.value);
   generated_text.value = apiThinkingText.value;
-
   axios
     .post(
       apiURL,
@@ -35,15 +31,11 @@ function callAPI() {
       { headers: { "content-type": "application/json" } }
     )
     .then((response) => {
-      console.log(response.data);
       var body = JSON.parse(response.data.body);
-      //console.log(text[0]);
       var text = [];
       for (var i = 0; i < numberToGenerate.value; i++) {
         text.push(body[i]);
       }
-      console.log(typeof text);
-      console.log(text);
       generated_text.value = text;
     })
     .catch((error) => {
