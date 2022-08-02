@@ -5,9 +5,9 @@ var seedPhrase = ref("You enter a room");
 var numberToGenerate = ref(1);
 var buttonText = ref("Generate 1 sentence");
 //var apiReturn = ref(Object);
-const apiThinkingText = ref("Generating...");
+const apiThinkingText = ref(["Generating..."]);
 //var apiThinkingFlag = ref(false);
-var generated_text = ref("What will you generate?");
+var generated_text = ref(["What will you generate?"]);
 const apiURL =
   "https://s99cwqgkyk.execute-api.us-west-2.amazonaws.com/prod-v1-0/make-inference";
 
@@ -20,6 +20,7 @@ function updateButtonText() {
 function callAPI() {
   console.log("Button was clicked");
   console.log("Seed Phrase was: " + seedPhrase.value);
+  console.log("Number to generate is: " + numberToGenerate.value);
   generated_text.value = apiThinkingText.value;
 
   axios
@@ -28,15 +29,23 @@ function callAPI() {
       {
         params: {
           input: seedPhrase.value,
-          num_return_sequences: numberToGenerate.value,
+          num_return_sequences: parseInt(numberToGenerate.value, 10),
         },
       },
       { headers: { "content-type": "application/json" } }
     )
     .then((response) => {
-      console.log(response);
+      console.log(response.data);
+      var body = JSON.parse(response.data.body);
+      //console.log(text[0]);
+      var text = [];
+      for (var i = 0; i < numberToGenerate.value; i++) {
+        text.push(body[i]);
+      }
+      console.log(typeof text);
+      console.log(text);
+      generated_text.value = text;
     })
-
     .catch((error) => {
       console.error("An error occured.", error);
     });
@@ -75,9 +84,11 @@ function callAPI() {
     </div>
     <div class="item">
       <div class="return-box">
-        <p>
-          {{ generated_text }}
-        </p>
+        <ul class="no-bullets">
+          <li v-for="item in generated_text" :key="item.id">
+            {{ item }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -95,7 +106,8 @@ button {
   background-color: #efeff3;
   height: 250px;
 }
-p {
+ul.no-bullets {
+  list-style-type: none;
   padding: 8px;
 }
 </style>
