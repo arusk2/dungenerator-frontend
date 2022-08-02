@@ -1,8 +1,14 @@
 <script setup>
 import { ref } from "vue";
-const seedPhrase = ref("You enter a room");
-const numberToGenerate = ref(1);
-const buttonText = ref("Generate 1 sentence");
+import axios from "axios";
+var seedPhrase = ref("You enter a room");
+var numberToGenerate = ref(1);
+var buttonText = ref("Generate 1 sentence");
+//var apiReturn = ref(Object);
+const apiThinkingText = ref("Generating...");
+//var apiThinkingFlag = ref(false);
+var generated_text = ref("What will you generate?");
+
 function updateButtonText() {
   if (numberToGenerate.value === 1) buttonText.value = "Generate 1 sentence";
   else buttonText.value = "Generate " + numberToGenerate.value + " sentences";
@@ -10,9 +16,22 @@ function updateButtonText() {
 }
 
 function callAPI() {
-  console.log("placeholder");
   console.log("Button was clicked");
   console.log("Seed Phrase was: " + seedPhrase.value);
+  generated_text.value = apiThinkingText.value;
+
+  axios
+    .get("https://baconipsum.com/api/", {
+      params: {
+        type: "all-meat",
+        sentences: 5,
+        "start-with-lorem": 1,
+      },
+    })
+    .then((response) => console.log(response))
+    .catch((error) => {
+      console.error("An error occured.", error);
+    });
 }
 </script>
 
@@ -46,6 +65,13 @@ function callAPI() {
         <button @click="callAPI">{{ buttonText }}</button>
       </div>
     </div>
+    <div class="item">
+      <div class="return-box">
+        <p>
+          {{ generated_text }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,5 +79,15 @@ function callAPI() {
 button {
   margin-top: 2rem;
   color: blue;
+}
+.return-box {
+  margin: 20px 0px;
+  overflow-y: scroll;
+  border: 4px double #4b4c53;
+  background-color: #efeff3;
+  height: 250px;
+}
+p {
+  padding: 8px;
 }
 </style>
