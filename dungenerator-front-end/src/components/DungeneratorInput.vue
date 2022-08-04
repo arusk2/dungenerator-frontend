@@ -89,14 +89,14 @@ function callAPI() {
 <style scoped>
 button {
   margin-top: 2rem;
-  color: blue;
 }
 .return-box {
   margin: 20px 0px;
   overflow-y: scroll;
   border: 4px double #4b4c53;
   background-color: #efeff3;
-  height: 250px;
+  min-height: 100px;
+  height: 30vh;
 }
 ul.no-bullets {
   list-style-type: none;

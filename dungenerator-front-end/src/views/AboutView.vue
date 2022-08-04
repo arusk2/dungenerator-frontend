@@ -1,10 +1,10 @@
 <script setup>
-import ClickerComponent from "@/components/ClickerComponent.vue";
+import AboutComponent from "../components/AboutComponent.vue";
 </script>
 
 <template>
   <div class="about">
-    <ClickerComponent />
+    <AboutComponent />
   </div>
 </template>
 
