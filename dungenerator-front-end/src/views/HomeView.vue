@@ -9,10 +9,12 @@ import DungeneratorInput from "../components/DungeneratorInput.vue";
       <template #header>Generate Rooms</template>
       <template #body>
         The language model needs a seed phrase to start. Enter a few words to
-        give the model something to start with. This seed phrase will be the
-        start of all of your sentences generated. <br />
+        give the model something to start with. Each sentence generated will
+        start with this seed phrase. <br />
         Then, indicate the number of unique sentences you'd like the model to
         generate and click generate to get the proccess started! <br /><br />
+      </template>
+      <template #note>
         * Note: currently, generation can take 5-30 seconds. I am working to
         speed up inference times.
       </template>
@@ -31,6 +33,9 @@ import DungeneratorInput from "../components/DungeneratorInput.vue";
 .details {
   flex: 1;
   margin-left: 1rem;
+}
+.note {
+  font-size: 0.8rem;
 }
 
 h3 {

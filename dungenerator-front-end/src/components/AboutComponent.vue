@@ -5,6 +5,9 @@ import AboutItem from "./AboutItem.vue";
 <template>
   <!-- Insert header describing project and link to dataset here.
     Need link to gpt2 and link to artist -->
+  <div class="header">
+    <h3>About This Project</h3>
+  </div>
   <AboutItem>
     <template #heading> Andrew Ruskamp-White</template>
     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
