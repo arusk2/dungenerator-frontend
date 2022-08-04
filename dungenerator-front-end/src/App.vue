@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
+import TitleLine from "./components/TitleLine.vue";
 </script>
 
 <template>
@@ -31,12 +31,11 @@ import HelloWorld from "./components/HelloWorld.vue";
     </div>
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <TitleLine msg="Dungeon Room Generator" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/scratch">Scratch</RouterLink>
       </nav>
     </div>
   </header>
@@ -49,7 +48,8 @@ import HelloWorld from "./components/HelloWorld.vue";
   font-family: monospace;
   white-space: pre;
   display: block;
-  margin: 0 auto 2rem;
+  margin: 2rem auto 1.5rem auto;
+  line-height: 1;
 }
 header {
   line-height: 1.5;
@@ -58,9 +58,8 @@ header {
 
 nav {
   width: 100%;
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -97,15 +96,14 @@ nav a:first-of-type {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    margin-top: -1rem;
   }
 
   nav {
     text-align: left;
     margin-left: -1rem;
-    font-size: 1rem;
-
+    font-size: 1.5rem;
     padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>

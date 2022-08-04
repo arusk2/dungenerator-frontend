@@ -9,11 +9,10 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="title">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
-      <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>.
+      Use the power of a GPT-2 language model to generate room descriptions for
+      fantasy role playing games or as inspiration for creative projects.
     </h3>
   </div>
 </template>
