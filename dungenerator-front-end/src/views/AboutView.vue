@@ -4,9 +4,7 @@ import AboutComponent from "../components/AboutComponent.vue";
 
 <template>
   <main>
-    <div class="about">
-      <AboutComponent />
-    </div>
+    <AboutComponent />
   </main>
 </template>
 

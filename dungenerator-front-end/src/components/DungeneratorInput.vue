@@ -48,7 +48,7 @@ function callAPI() {
   <div class="item">
     <div class="details">
       <label>
-        Enter a seed phrase.
+        Enter a seed phrase:
         <input v-model="seedPhrase" />
       </label>
     </div>

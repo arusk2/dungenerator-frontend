@@ -11,7 +11,7 @@ defineProps({
   <div class="greetings">
     <h1 class="title">{{ msg }}</h1>
     <h3>
-      Use the power of a GPT-2 language model to generate room descriptions for
+      Use a finetuned GPT-2 language model to generate room descriptions for
       fantasy role playing games or as inspiration for creative projects.
     </h3>
   </div>

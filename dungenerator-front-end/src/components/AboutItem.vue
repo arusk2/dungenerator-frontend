@@ -1,8 +1,8 @@
 <template>
-  <div class="item">
-    <i>
+  <div class="about-item">
+    <div class="profile-pic">
       <slot name="icon"></slot>
-    </i>
+    </div>
     <div class="details">
       <h3>
         <slot name="heading"></slot>
@@ -13,7 +13,7 @@
 </template>
 
 <style scoped>
-.item {
+.about-item {
   margin-top: 2rem;
   display: flex;
 }
@@ -21,16 +21,12 @@
 .details {
   flex: 1;
   margin-left: 1rem;
+  /* left: 40px; */
 }
 
-i {
-  display: flex;
-  place-items: center;
-  place-content: center;
-  width: 70px;
-  height: 70px;
-
-  color: var(--color-text);
+.profile-pic {
+  width: 20%;
+  margin-left: 0.8rem;
 }
 
 h3 {
@@ -39,43 +35,19 @@ h3 {
   margin-bottom: 0.4rem;
   color: var(--color-heading);
 }
-
+/* 
 @media (min-width: 1024px) {
-  .item {
-    margin-top: 0;
+  .about-item {
+    margin-top: 2rem;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
   }
 
   i {
     top: calc(50% - 25px);
-    left: -26px;
+    left: 40px;
     position: absolute;
     width: 50px;
     height: 50px;
   }
-
-  .item:before {
-    content: " ";
-    position: absolute;
-    left: 0;
-    bottom: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    top: calc(50% + 25px);
-    height: calc(50% - 25px);
-  }
-
-  .item:first-of-type:before {
-    display: none;
-  }
-
-  .item:last-of-type:after {
-    display: none;
-  }
-}
+} */
 </style>

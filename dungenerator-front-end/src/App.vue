@@ -48,7 +48,7 @@ import TitleLine from "./components/TitleLine.vue";
   font-family: monospace;
   white-space: pre;
   display: block;
-  margin: 2rem auto 1.5rem auto;
+  margin: 7vh auto 1.5rem auto;
   line-height: 1;
 }
 header {

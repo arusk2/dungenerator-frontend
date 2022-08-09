@@ -8,9 +8,8 @@ import DungeneratorInput from "../components/DungeneratorInput.vue";
     <DungeneratorHeader>
       <template #header>Generate Rooms</template>
       <template #body>
-        The language model needs a seed phrase to start. Enter a few words to
-        give the model something to start with. Each sentence generated will
-        start with this seed phrase. <br />
+        Enter a few words to give the model something to start with. Each
+        sentence generated will start with this seed phrase. <br />
         Then, indicate the number of unique sentences you'd like the model to
         generate and click generate to get the proccess started! <br /><br />
       </template>
@@ -51,7 +50,7 @@ body {
 @media (min-width: 1024px) {
   .item {
     margin-top: 0;
-    padding: 0.4rem 2rem 1rem calc(var(--section-gap) / 8);
+    padding: 0.4rem 2rem 1rem calc(var(--section-gap) / 10);
   }
 }
 </style>
