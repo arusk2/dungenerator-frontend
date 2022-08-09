@@ -13,26 +13,28 @@ import AboutItem from "./AboutItem.vue";
       This is a free, passion project that uses OpenAI's
       <a href="https://openai.com/blog/better-language-models/">GPT-2</a>
       language model to generate novel descriptions of rooms you could find
-      while dungeon delving with your party of adventurers in The Worlds Most
-      Popular Roleplaying Game.
+      while dungeon delving with your party of adventurers in a fantasy
+      role-playing game.
     </div>
     <div class="details">
-      The GPT-2 model was trained on the
+      This GPT-2 model was trained on data from
       <a href="https://github.com/arusk2/dungeons-and-datasets"
-        >Dungeons and Datasets
+        >Dungeons and Datasets,
       </a>
-      dataset that collects spoken and written descriptions of dungeon rooms
-      from a variety of sources.
+      a collection of spoken and written descriptions of dungeon rooms from a
+      variety of sources.
     </div>
     <div class="details">
       Special thanks to
       <a href="https://github.com/sciwizard">Joel Williams</a> and
       <a href="https://github.com/zachgrow">Zach Grow</a> who both worked with
-      me on creating the Dungeons and Datasets dataset.
+      me on creating Dungeons and Datasets.
     </div>
-    <div class="note">
-      ASCII art by
-      <a href="https://www.asciiart.eu/mythology/dragons">Ooyamaneko</a>.
+    <div class="details">
+      <div class="note">
+        ASCII art by
+        <a href="https://www.asciiart.eu/mythology/dragons">Ooyamaneko</a>.
+      </div>
     </div>
     <AboutItem>
       <template #icon>

@@ -28,12 +28,11 @@
 .link-wrapper {
   display: flex;
   place-items: flex-start;
+  margin-left: -1rem;
 }
 .link {
   text-align: left;
   padding: 0 1rem;
-}
-.link {
   display: inline-block;
   border-left: 1px solid var(--color-border);
 }
