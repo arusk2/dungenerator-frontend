@@ -96,6 +96,7 @@ button {
   border: 4px double #4b4c53;
   background-color: #efeff3;
   min-height: 100px;
+  max-height: 150px;
   height: 30vh;
 }
 ul.no-bullets {

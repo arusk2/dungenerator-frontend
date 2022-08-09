@@ -3,9 +3,11 @@ import AboutComponent from "../components/AboutComponent.vue";
 </script>
 
 <template>
-  <div class="about">
-    <AboutComponent />
-  </div>
+  <main>
+    <div class="about">
+      <AboutComponent />
+    </div>
+  </main>
 </template>
 
 <style></style>
