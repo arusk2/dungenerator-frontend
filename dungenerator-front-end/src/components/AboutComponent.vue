@@ -24,6 +24,16 @@ import AboutItem from "./AboutItem.vue";
       dataset that collects spoken and written descriptions of dungeon rooms
       from a variety of sources.
     </div>
+    <div class="details">
+      Special thanks to
+      <a href="https://github.com/sciwizard">Joel Williams</a> and
+      <a href="https://github.com/zachgrow">Zach Grow</a> who both worked with
+      me on creating the Dungeons and Datasets dataset.
+    </div>
+    <div class="note">
+      ASCII art by
+      <a href="https://www.asciiart.eu/mythology/dragons">Ooyamaneko</a>.
+    </div>
     <AboutItem>
       <template #icon>
         <img
@@ -32,15 +42,27 @@ import AboutItem from "./AboutItem.vue";
           alt="Andrew Ruskamp-White"
         />
       </template>
-      <template #heading> Andrew Ruskamp-White</template>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda
-      quibusdam quia tempore expedita quisquam perspiciatis vero odio excepturi
-      magni, libero vel praesentium quod et. Iste culpa modi et est itaque?
+      <template #heading>Andrew Ruskamp-White</template>
+      <template #body>
+        Your friendly neighborhood computer scientist and nerd.
+      </template>
+      <template #twitter-link
+        ><a href="https://twitter.com/ARuskampWhite">Twitter</a></template
+      >
+      <template #github-link>
+        <a href="https://github.com/arusk2/">Github</a></template
+      >
     </AboutItem>
   </div>
 </template>
 
 <style scoped>
+.note {
+  font-size: 0.8rem;
+}
+.details {
+  margin-bottom: 1rem;
+}
 h3 {
   font-size: 1.5rem;
   font-weight: 500;
@@ -49,8 +71,10 @@ h3 {
 }
 
 img {
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   border-radius: 50%;
+  max-width: 110px;
+  max-height: 120px;
 }
 </style>
