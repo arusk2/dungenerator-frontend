@@ -26,10 +26,11 @@ jobs:
         host: ${{secrets.DUNGENERATOR_SSH_HOST}} #IP Address of server we're SSHing into
         key: ${{secrets.DUNGENERATOR_PRIVATE_KEY}} # Private key of server.
         username: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
-        run: echo Hello, world!
+        
         script: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo 'Hello World!'
+          echo 'Add other actions to build,'
+          echo 'test, and deploy your project.'
           mkdir test
           cd test
           git clone git@github.com:arusk2/dungenerator-frontend.git
