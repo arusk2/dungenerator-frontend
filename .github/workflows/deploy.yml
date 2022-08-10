@@ -28,8 +28,9 @@ jobs:
         username: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
         # break into steps with names and "run" instead of "script"
         script: |
+            set -e
             echo 'checking npm'
-            npm -v
+            echo $PATH
 #           # Make a folder to clone code
 #           mkdir prod
 #           cd prod
