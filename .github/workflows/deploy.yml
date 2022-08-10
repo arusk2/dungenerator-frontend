@@ -29,9 +29,9 @@ jobs:
     - uses: action/setup-node@v3
       with:
         node-version: 16
-      run: npm ci
-      run: npm -v
-      run: npm test
+    - run: npm ci
+    - run: npm -v
+    - run: npm test
     
     - name: Run a one-line script on server
       uses: appleboy/ssh-action@v0.1.5
