@@ -22,29 +22,28 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
     - name: Checkout Latest Branch
-    - uses: actions/checkout@v3
+      uses: actions/checkout@v3
     - run: ls
     
     - name: Install Node.js
-    - uses: action/setup-node@v3
+      uses: action/setup-node@v3
       with:
         node-version: 16
     - run: npm ci
-    - run: npm -v
     - run: npm test
     
-    - name: Run a one-line script on server
-      uses: appleboy/ssh-action@v0.1.5
-      with:
-        host: ${{secrets.DUNGENERATOR_SSH_HOST}} #IP Address of server we're SSHing into
-        key: ${{secrets.DUNGENERATOR_PRIVATE_KEY}} # Private key of server.
-        username: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
-        # break into steps with names and "run" instead of "script"
-        script: |
-            set -e
-            echo 'checking npm'
-            echo $PATH
-            npm -v
+#     - name: Run a one-line script on server
+#       uses: appleboy/ssh-action@v0.1.5
+#       with:
+#         host: ${{secrets.DUNGENERATOR_SSH_HOST}} #IP Address of server we're SSHing into
+#         key: ${{secrets.DUNGENERATOR_PRIVATE_KEY}} # Private key of server.
+#         username: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
+#         # break into steps with names and "run" instead of "script"
+#         script: |
+#             set -e
+#             echo 'checking npm'
+#             echo $PATH
+#             npm -v
 #           # Make a folder to clone code
 #           mkdir prod
 #           cd prod
