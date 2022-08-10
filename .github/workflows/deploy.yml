@@ -46,6 +46,7 @@ jobs:
           REMOTE_USER: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
           SOURCE: "dist/"
           EXCLUDE: "/node_modules/", "/dist/"
+
 #     - name: Run a one-line script on server
 #       uses: appleboy/ssh-action@v0.1.5
 #       with:
