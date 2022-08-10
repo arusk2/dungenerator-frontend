@@ -26,25 +26,29 @@ jobs:
         host: ${{secrets.DUNGENERATOR_SSH_HOST}} #IP Address of server we're SSHing into
         key: ${{secrets.DUNGENERATOR_PRIVATE_KEY}} # Private key of server.
         username: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
+    - name: Trying to see if I have connection
+    - run: npm -v
+    - run: node -v
         
-        script: |
-          # Make a folder to clone code
-          mkdir prod
-          cd prod
-          git clone git@github.com:arusk2/dungenerator-frontend.git
-          echo 'Successfully cloned frontend'
-          cd dungenerator-frontend/dungenerator-front-end
+        # break into steps with names and "run" instead of "script"
+#         script: |
+#           # Make a folder to clone code
+#           mkdir prod
+#           cd prod
+#           git clone git@github.com:arusk2/dungenerator-frontend.git
+#           echo 'Successfully cloned frontend'
+#           cd dungenerator-frontend/dungenerator-front-end
           
-          echo 'Attempting to install dependencies'
-          # Install dependendies
-          npm install
+#           echo 'Attempting to install dependencies'
+#           # Install dependendies
+#           npm install
           
-          # build dist folder from source code
-          npm run build
+#           # build dist folder from source code
+#           npm run build
           
-          # move dist folder to where nginx knows to look for the html
-          sudo cp -r dist /var/www/html/Vue/ 
-          cd ~
-          # Remove code artifacts, keeping dist folder in above directory
-          # rm -rf prod
+#           # move dist folder to where nginx knows to look for the html
+#           sudo cp -r dist /var/www/html/Vue/ 
+#           cd ~
+#           # Remove code artifacts, keeping dist folder in above directory
+#           # rm -rf prod
           
