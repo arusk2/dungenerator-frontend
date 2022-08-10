@@ -28,7 +28,6 @@ jobs:
         username: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
         
         script: |
-          set -e
           # Make a folder to clone code
           mkdir prod
           cd prod
@@ -38,7 +37,7 @@ jobs:
           
           echo 'Attempting to install dependencies'
           # Install dependendies
-          sudo npm install
+          npm install
           
           # build dist folder from source code
           npm run build
