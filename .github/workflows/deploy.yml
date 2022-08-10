@@ -38,7 +38,7 @@ jobs:
         run: cd dungenerator-front-end && npm run build && ls $$ echo $GITHUB_WORKSPACE
 
       - name: Connect via SSH to Deploy
-        uses: easingthemes/ssh-deploy@v2
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{secrets.DUNGENERATOR_PRIVATE_KEY}}
           ARGS: "-rltgoDzvO --delete"
