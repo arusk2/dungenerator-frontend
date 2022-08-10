@@ -35,8 +35,10 @@ jobs:
           git clone git@github.com:arusk2/dungenerator-frontend.git
           echo 'Successfully cloned frontend'
           cd dungenerator-frontend/dungenerator-front-end
+          
+          echo 'Attempting to install dependencies'
           # Install dependendies
-          npm install
+          sudo npm install
           
           # build dist folder from source code
           npm run build
