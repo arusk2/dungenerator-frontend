@@ -29,9 +29,14 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm ci
-    - run: npm test
+    - run: npm -v
     
+    - name: Install Dependencies
+      run: cd dungenerator-frontend/dungenerator-front-end && npm install
+    
+    - name: Build from Repo
+      run: npm run build
+      run: ls
 #     - name: Run a one-line script on server
 #       uses: appleboy/ssh-action@v0.1.5
 #       with:
