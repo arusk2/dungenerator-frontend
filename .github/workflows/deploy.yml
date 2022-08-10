@@ -6,7 +6,7 @@ name: Build & Deploy with Github Actions
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -20,22 +20,22 @@ jobs:
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:    
-    - name: Checkout Latest Branch
-      uses: actions/checkout@v3
-    - run: ls && ls /dungenerator-frontend
-    
-    - name: Install Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 16
-    - run: npm -v && ls
-    
-    - name: Install Dependencies
-      run: cd dungenerator-frontend/dungenerator-front-end && npm install
-    
-    - name: Build from Repo
-      run: npm run build && ls
+    steps:
+      - name: Checkout Latest Branch
+        uses: actions/checkout@v3
+      - run: ls && ls /dungenerator-front-end
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm -v && ls
+
+      - name: Install Dependencies
+        run: cd dungenerator-front-end && npm install
+
+      - name: Build from Repo
+        run: npm run build && ls
 #     - name: Run a one-line script on server
 #       uses: appleboy/ssh-action@v0.1.5
 #       with:
@@ -54,17 +54,17 @@ jobs:
 #           git clone git@github.com:arusk2/dungenerator-frontend.git
 #           echo 'Successfully cloned frontend'
 #           cd dungenerator-frontend/dungenerator-front-end
-          
+
 #           echo 'Attempting to install dependencies'
 #           # Install dependendies
 #           npm install
-          
+
 #           # build dist folder from source code
 #           npm run build
-          
+
 #           # move dist folder to where nginx knows to look for the html
-#           sudo cp -r dist /var/www/html/Vue/ 
+#           sudo cp -r dist /var/www/html/Vue/
 #           cd ~
 #           # Remove code artifacts, keeping dist folder in above directory
 #           # rm -rf prod
-          
+
