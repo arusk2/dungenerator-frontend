@@ -32,7 +32,7 @@ jobs:
     - run: npm -v
     
     - name: Install Dependencies
-      run: cd dungenerator-frontend/dungenerator-front-end && npm install
+      run: cd /home/runner/work/dungenerator-frontend/dungenerator-frontend/ && npm install
     
     - name: Build from Repo
       run: npm run build && ls
