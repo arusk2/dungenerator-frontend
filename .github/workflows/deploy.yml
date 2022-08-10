@@ -35,7 +35,7 @@ jobs:
         run: cd dungenerator-front-end && npm install
 
       - name: Build from Repo
-        run: ls && dungenerator-front-end && npm run build
+        run: ls && cd dungenerator-front-end && npm run build
 #     - name: Run a one-line script on server
 #       uses: appleboy/ssh-action@v0.1.5
 #       with:
