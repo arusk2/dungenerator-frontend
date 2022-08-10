@@ -23,16 +23,16 @@ jobs:
     steps:    
     - name: Checkout Latest Branch
       uses: actions/checkout@v3
-    - run: ls
+    - run: ls && ls /dungenerator-frontend
     
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
         node-version: 16
-    - run: npm -v
+    - run: npm -v && ls
     
     - name: Install Dependencies
-      run: cd /home/runner/work/dungenerator-frontend/dungenerator-frontend/ && npm install
+      run: cd dungenerator-frontend/dungenerator-front-end && npm install
     
     - name: Build from Repo
       run: npm run build && ls
