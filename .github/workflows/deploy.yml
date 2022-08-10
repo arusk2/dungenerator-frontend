@@ -27,7 +27,9 @@ jobs:
         key: ${{secrets.DUNGENERATOR_PRIVATE_KEY}} # Private key of server.
         username: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
     - name: Trying to see if I have connection
-      run: npm -v
+      run: |
+        npm -v
+        ls
         
         # break into steps with names and "run" instead of "script"
 #         script: |
