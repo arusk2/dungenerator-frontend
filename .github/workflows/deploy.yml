@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Checkout Latest Branch
         uses: actions/checkout@v3
-      - run: ls && ls /dungenerator-front-end
+      - run: ls && ls dungenerator-front-end
 
       - name: Install Node.js
         uses: actions/setup-node@v3
