@@ -45,7 +45,7 @@ jobs:
           REMOTE_HOST: ${{secrets.DUNGENERATOR_SSH_HOST}}
           REMOTE_USER: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
           SOURCE: "/dungenerator-front-end/dist/"
-          TARGET: "/var/www/html/Vue"
+          TARGET: "/var/www/html/Vue/"
           EXCLUDE: "/node_modules/"
 #     - name: Run a one-line script on server
 #       uses: appleboy/ssh-action@v0.1.5
