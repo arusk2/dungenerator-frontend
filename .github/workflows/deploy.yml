@@ -41,11 +41,11 @@ jobs:
         uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{secrets.DUNGENERATOR_PRIVATE_KEY}}
-          ARGS: "-rltgoDzavO --delete"
+          ARGS: "-rltDzavO --delete"
           REMOTE_HOST: ${{secrets.DUNGENERATOR_SSH_HOST}}
           REMOTE_USER: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
           SOURCE: "/dungenerator-front-end/dist/"
-          TARGET: "/var/www/html/Vue/"
+          TARGET: "/var/www/html/Vue/dist/"
           EXCLUDE: "/node_modules/"
 #     - name: Run a one-line script on server
 #       uses: appleboy/ssh-action@v0.1.5
