@@ -44,7 +44,7 @@ jobs:
           ARGS: "-rltgoDzvO --delete"
           REMOTE_HOST: ${{secrets.DUNGENERATOR_SSH_HOST}}
           REMOTE_USER: ${{secrets.DUNGENERATOR_SERVER_USERNAME}}
-          SOURCE: "dist/"
+          SOURCE: "/dungenerator-front-end/dist/"
           TARGET: "/var/www/html/Vue"
           EXCLUDE: "/node_modules/, /dist/"
 #     - name: Run a one-line script on server
